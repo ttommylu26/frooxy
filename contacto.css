@@ -1,5 +1,6 @@
 body{
     background-color: rgb(230, 230, 230);
+    overflow: hidden;
 }
 
 *{
@@ -29,19 +30,25 @@ hr{
 /* header */
 header{
     padding: 2mm;
-    background-image: url("img/index/fog-1535201_1920.jpg"); background-repeat: no-repeat;
+    background-image: url("https://cdn.pixabay.com/photo/2014/07/28/20/39/dusk-404072_960_720.jpg"); background-repeat: no-repeat;
     background-position: center; background-size: cover;
-    height: 70vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header img{
-    width: 2cm;
-    transition: all .2s;
+.logo{
+    position: absolute;
+    top: 1mm;
+    left: 1mm;
+    width: 2.1cm;
 }
 
-header img:hover{
+.logo:hover{
     opacity: 75%;
 }
+
 /* header - end */
 
 
@@ -51,6 +58,8 @@ nav{
     top: 0px;
     right: 0px;
     padding: 3mm;
+    background-color: transparent;
+    text-align: right;
 }
 
 nav ul li{
@@ -77,7 +86,6 @@ nav button{
     outline: none;
     background-color: transparent;
     border: none;
-    transition: all .5s;
 }
 
 nav img{
@@ -170,93 +178,51 @@ nav img{
 
 
 /* section1 */
-.section1{
-    width: 100%;
-    height: max-content;
-    padding-top: 5mm;
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-}
-
-.target1{
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 3mm;
-    width: 7cm;
-    height: max-content;
-    margin-left: 5mm;
-    float: left;
-    border-radius: 0.2cm;
-    margin-bottom: 5mm;
-}
-
-.target1 img{
-    width: 3cm;
-    height: 3cm;
-    border-radius: 150px;
-}
-
-.target2{
-    float: left;
-    margin-left: 5mm;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin-right: 5mm;
-    padding: 3mm;
+section{
     background-color: white;
     border-radius: 0.2cm;
+    text-align: center;
+    margin: 3mm;
 }
 
-.target2 img{
-    width: 9cm;
-    border-top-left-radius: 0.2cm;
-    border-top-right-radius: 0.2cm;
-}
-
-.target2 p{
-    width: 9cm;
-}
-
-@media(max-width: 707px){
-    .target1{
-        margin-right: 5mm;
-    }
-}
-
-@media(max-width: 423px){    
-    .target2 img{
-        width: 100%;
-    }
-
-    .target2 p{
-        width: 100%;
-    }
-}
-/* section1 - end */
-
-
-/* footer */
-footer{
+section h1{
+    text-align: center;
     background-color: black;
     color: white;
-    height: 3cm;
-    margin-top: 5mm;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 2mm;
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    cursor: default;
 }
 
-footer p{
-    color: rgb(128, 128, 128);
+section p{
+    padding: 3mm;
+    padding-bottom: 0mm;
 }
 
-footer p::selection{
-    background-color: rgba(255, 255, 255, 0.329);
+section ul{
+    list-style: none;
+    padding: 3mm;
+}
+
+section ul li a{
+    background-color: transparent;
+    padding: 2mm;
     color: black;
+    text-decoration-line: none;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    border: solid black 1px;
+    border-radius: 0.3cm;
+    opacity: 75%;
+    transition: all .2s;
 }
 
-footer a{
-    position: absolute;
-    margin-top: 1.4cm;
+section ul li a:hover{
+    opacity: 100%;
 }
-/* footer - end */
+
+section ul li a img{
+    margin-right: 1mm;
+}
